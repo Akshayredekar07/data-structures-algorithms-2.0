@@ -1,10 +1,6 @@
-# Time Complexity — Complete Mastery Notes
+# **Time Complexity**
 
-> How to use this: Read once slowly end to end. After that, only use the Quick Reference at the bottom for revision. You should never need to re-study this topic from scratch again.
-
----
-
-## 1. What Is Time Complexity
+## **1. What Is Time Complexity**
 
 Time complexity is the **rate at which the running time of your code grows with respect to input size**.
 
@@ -12,11 +8,13 @@ It does NOT measure actual time in seconds. It measures the **pattern of growth*
 
 This matters because different machines run code at different speeds. An old Microsoft machine and a new MacBook will take different amounts of time for the same code. But both follow the same growth pattern. That pattern is what time complexity captures.
 
-**The machine independence example from your notes:**
+**The machine independence example:**
 
 Linear search on array of 1000 elements:
 - Old Microsoft machine: steep line going up fast
 - New MacBook: gentle line going up slowly
+
+![Alt Text](image07.svg)
 
 Both are straight lines. Both grow linearly. Both are O(n). The actual time differs but the **shape of growth is identical**.
 
@@ -40,9 +38,7 @@ Now double the distance to 200 km:
 
 Both grew linearly. Both are O(n). The actual speed differs but the growth pattern is identical. This is exactly why time complexity is machine independent.
 
----
-
-## 2. Why You Need to Know This Before Coding
+## **2. Why You Need to Know This Before Coding**
 
 Without time complexity: you write code, run it, get TLE (Time Limit Exceeded), and have no idea why.
 
@@ -63,13 +59,12 @@ Math check before coding:
 
 That is a guaranteed TLE. You need O(n log n) or O(n) instead. This calculation takes 10 seconds and saves you 30 minutes of debugging.
 
----
 
-## 3. Three Golden Rules
+## **3. Three Golden Rules**
 
 These three rules apply every single time you calculate time complexity. No exceptions.
 
-### Rule 1 — Always use the worst case
+### **Rule 1: Always use the worst case**
 
 You only care about Big O (worst case) for interviews and problem solving. Best case is irrelevant because test cases will always hit your worst scenario.
 
@@ -79,7 +74,7 @@ Best case  — target at index 0 → 1 step   (ignore this)
 Worst case — target at last index or not found → n steps   (use this)
 ```
 
-### Rule 2 — Drop all constants
+### **Rule 2: Drop all constants**
 
 Constants are multipliers that do not change the shape of growth. Drop them.
 
@@ -90,11 +85,11 @@ O(3n² + 7)   →  O(n²)
 O(100)       →  O(1)
 ```
 
-### Rule 3 — Keep only the dominant term (think at infinity)
+### **Rule 3: Keep only the dominant term (think at infinity)**
 
 When n is 1 million, smaller terms become completely irrelevant. Only the fastest-growing term survives.
 
-**Proof from your notes — let N = 1 million:**
+**let N = 1 million:**
 
 For f(N) = N³ + log(N):
 ```
@@ -116,9 +111,7 @@ Drop everything except the dominant term.
 Result: O(N³)
 ```
 
----
-
-## 3. How to Read Code and Find Complexity
+## **3. How to Read Code and Find Complexity**
 
 This is the real skill. You need to look at code and instantly know its complexity.
 
@@ -235,9 +228,7 @@ for i in range(n):
 
 n × n × n. Total: **O(n³)**
 
----
-
-## 4. The Complexity Hierarchy
+## **4. The Complexity Hierarchy**
 
 From fastest to slowest (best to worst as n grows):
 
@@ -371,13 +362,9 @@ Generating all permutations of n elements gives n! results. For n=12 that is alr
 
 At n=20, factorial is already 770 years. This is not an exaggeration. This is why you never use brute force recursion without memoization.
 
----
+## **5. The Five Notations**
 
-## 5. The Five Notations
-
-Your notes cover all five. Here they are clearly:
-
-### Big O — O(n) — Worst case, upper bound
+### **Big O — O(n) — Worst case, upper bound**
 
 "My algorithm will never be slower than this."
 
