@@ -1,8 +1,6 @@
-# Time Complexity — 30+ Worked Calculations and Edge Cases
+# **Time Complexity 30+ Worked Calculations and Edge Cases**
 
-> This file is pure practice. Every example shows the full step-by-step calculation, the math check, the constraint check, and where people go wrong. No shortcuts. Work through each one.
-
----
+This file is pure practice. Every example shows the full step-by-step calculation, the math check, the constraint check, and where people go wrong. No shortcuts. Work through each one.
 
 ## How to Use This File
 
@@ -15,9 +13,7 @@ Every example follows this structure:
 
 The math rule: **1 second ≈ 10⁸ operations**. LeetCode time limit is usually 1–2 seconds.
 
----
-
-## Part 1 — The Core Math: Constraint to Complexity
+## **Part 1 The Core Math: Constraint to Complexity**
 
 Before touching any code, this is the check you do in your head.
 
@@ -43,15 +39,13 @@ If Time > 2 seconds → TLE
 | 1,000,000 | 10⁸ | O(n) only |
 | 10⁹ | 10⁸ | O(log n) or O(sqrt n) only |
 
----
 
-## Part 2 — Constraint Check Examples (10 examples)
+## **Part 2 Constraint Check Examples (10 examples)**
 
 These are the 10-second checks you do before writing a single line of code.
 
----
 
-### Example 1 — Two Sum brute force check
+### Example 1 Two Sum brute force check
 
 **Problem:** Find two numbers that sum to target. Array size up to n = 10⁵.
 **Your idea:** Two nested loops checking every pair.
@@ -1211,3 +1205,55 @@ Step 5: If yes, code it. If no, think of a better approach first.
 ---
 
 *Use this file as a problem bank. Pick any example, cover the answer, calculate it yourself, then check. Do 5 of these every day for the first week and constraint-reading becomes automatic.*
+
+
+**Common log₂ values**
+
+| n | log₂(n) |
+|---|---|
+| 1 | 0 |
+| 2 | 1 |
+| 4 | 2 |
+| 8 | 3 |
+| 16 | 4 |
+| 32 | 5 |
+| 64 | 6 |
+| 128 | 7 |
+| 256 | 8 |
+| 512 | 9 |
+| 1024 | 10 |
+| 10⁶ | ≈ 20 |
+| 10⁹ | ≈ 30 |
+
+**Common log₁₀ values**
+
+| n | log₁₀(n) |
+|---|---|
+| 1 | 0 |
+| 10 | 1 |
+| 100 | 2 |
+| 1000 | 3 |
+| 10⁶ | 6 |
+| 10⁹ | 9 |
+
+**Common formulas to memorize**
+
+```
+log(a × b)  =  log(a) + log(b)
+log(a ÷ b)  =  log(a) − log(b)
+log(aⁿ)     =  n × log(a)
+log_b(x)    =  log(x) ÷ log(b)       ← change of base
+log₂(x)     =  log₁₀(x) × 3.32       ← quick conversion
+log₂(x)     =  ln(x) × 1.44          ← from natural log
+log(1)      =  0   (any base)
+log_b(b)    =  1   (any base)
+```
+
+**DSA-specific ones**
+
+```
+n = 2^k  →  k = log₂(n)             ← binary search depth
+height of balanced BST = log₂(n)
+bits needed to store n = floor(log₂(n)) + 1
+n! ≈ n × log₂(n)                    ← sorting lower bound
+```
